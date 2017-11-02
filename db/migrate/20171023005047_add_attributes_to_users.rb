@@ -4,6 +4,6 @@ class AddAttributesToUsers < ActiveRecord::Migration[5.1]
     add_column :users, :picture, :string
     add_column :users, :position_held, :string
     add_column :users, :description, :text
-    add_reference :users, :user_contact, foreign_key: true
+#    add_reference :users, :user_contact, foreign_key: true
   end
 end
