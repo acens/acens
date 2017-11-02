@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%= favicon_link_tag 'acensLogo.ico', rel: 'apple-touch-icon' %>
+    <link rel="shortcut icon" href="img/acensLogo.ico">
+  	<meta name="description" content="Acens Empresa Júnior">
+  	<meta name="keywords" content="Site, Web, Desenvolvimento, Desing, Acens, Empresa júnior" />
+  	<meta name="author" content="acens.uece.br">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Google Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> <!-- Body font -->
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'> <!-- Navbar font -->
+		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- h1, h2, h3, h4, h5, h6 font -->
+    <title>Acens</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'ckeditor/init' %>
+
+  </head>
+
+  <body data-spy="scroll" data-target="#main-navbar">
+    <div class="page-loader"></div>  <!-- Display loading image while page loads -->
+    <div class="body">
+			<div id="body-container">
+        <%= render partial: "layouts/navbar" %>
+
+
+        <%= yield %>
+        <%= render partial: "layouts/footer" %>
+      </div> <!-- /.body-container -->
+    </div> <!-- /.body -->
+    <a href="#" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+  </body>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', 'data-turbolinks-eval': 'false' %>
+  <%= render partial: "layouts/notify" %>
+</html>

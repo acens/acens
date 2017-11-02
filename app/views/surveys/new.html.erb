@@ -1,0 +1,47 @@
+<div class="page">
+  <div class="more-space-l"></div>
+  <div class="container">
+    <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+      <h2>Pesquisa</h2>
+      <div class="divider divider-icon divider-md">//</div>
+      <p class="lead text-gray">Esta pesquisa tem o intuito de classicar qual o
+        melhor pacote de cursos que os alunos da computação desejam aprender.
+      </p>
+    </div>
+
+    <% @survey.errors.full_messages.each do |message| %>
+    <div class="alert alert-danger fade in alert-dismissable">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">&times;</a>
+      <%=message%>
+    </div>
+    <% end %>
+    <%= render partial: "layouts/pesquisa" %>
+    <div class="row">
+      <%= form_for @survey do |f| %>
+        <div class="form-group col-sm-12 col-md-4 col-md-offset-2">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control", placeholder: "Digite seu nome completo" %>
+        </div>
+        <div class="form-group col-sm-12 col-md-4 ">
+          <%= f.label :registration %>
+          <%= f.text_field :registration, class: "form-control", maxlength: 7, placeholder: "Digite sua matrícula"%>
+        </div>
+        <div class="form-group col-sm-12 col-md-4 col-md-offset-2">
+          <%= f.label :email %>
+          <%= f.email_field :email, class: "form-control", placeholder: "fulano@aluno.uece.br || E-mail da UECE" %>
+        </div>
+        <div class="form-group hidden">
+          <br>
+          <%= f.label :survey_option_id %>
+          <%= f.select :survey_option_id, options_from_collection_for_select(SurveyOption.all, :id, :name), class: "form-control" %>
+        </div>
+        <div class="form-group col-sm-12 col-md-6">
+          <br>
+          <%= f.submit "Cadastrar", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="more-space-xxl"></div>
+
+</div>

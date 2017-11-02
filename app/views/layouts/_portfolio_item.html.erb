@@ -1,0 +1,76 @@
+
+        <!-- Portfolio item-1 -->
+        <div class="portfolio-item col-sm-6 col-md-6 col-lg-3 wow flipInX" data-wow-delay="0.2s">
+          <a href="#" class="thumbnail" data-toggle="modal" data-target="#portfolioModal-<%= portfolio.id %>">
+            <%= image_tag portfolio.banner.url(:medium), alt: "JAO" %>
+            <div class="cover"></div>
+            <div class="caption">
+              <div class="caption-content text-center">
+                <h2><%= portfolio.title %></h2>
+                <div class="divider divider-sm"></div>
+                <p><%= portfolio.subtitle %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Begin portfolio modal-1 (Carousel Portfolio) -->
+        <div class="modal fade" id="portfolioModal-<%= portfolio.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-<%= portfolio.id%>" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content text-white">
+              <div class="close" data-dismiss="modal">
+                <div class="lr">
+                  <div class="rl"></div>
+                </div>
+              </div>
+              <div class="container">
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <div class="modal-image">
+                        <div class="owl-carousel owl-portfolio-modal">
+                          <% portfolio.pictures.each do |picture| %>
+                            <%= image_tag picture.image.url(:original) %>
+                          <% end %>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-5">
+                      <div class="modal-header">
+                        <h2 class="modal-title" id="myModalLabel-<%= portfolio.id %>"><%= portfolio.title %></h2>
+                        <div class="divider divider-sm divider-white divider-left"></div>
+                      </div>
+                      <div class="modal-text">
+                        <p><%= portfolio.subtitle %></p>
+                        <p><%= portfolio.description %></p>
+                      </div>
+                      <div class="modal-details">
+                        <ul>
+                          <li>Cliente:
+                            <strong>
+                              <a href="http://jaoodontounifor.com" target="_blank"><%= portfolio.client_name %></a>
+                            </strong>
+                          </li>
+                          <li>Data:
+                            <strong>
+                              <a>2017</a>
+                            </strong>
+                          </li>
+                          <li>Serviço:
+                            <strong>
+                              <a>Desenvolvimento WEB</a>
+                            </strong>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <p>2017 &copy Todos os direitos reservados</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End portfolio modal-1 -->

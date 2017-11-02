@@ -1,0 +1,25 @@
+/* Add here all your CSS customizations */
+
+.owl-carousel {
+  cursor: default;
+}
+
+.img-center {
+  margin: 0 auto;
+}
+
+.post .img-article {
+  max-width: 600px;
+}
+
+.recuo {
+  text-indent: 4em;
+}
+
+img.img_preview {
+  max-width: 100px;
+}
+
+.article-body {
+  text-align: justify;
+}

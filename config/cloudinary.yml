@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: adrianolopes17
+  api_key: '553522832125932'
+  api_secret: JQ5atm78-G88J8vdWc5Q-vUpVfg
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: adrianolopes17
+  api_key: '553522832125932'
+  api_secret: JQ5atm78-G88J8vdWc5Q-vUpVfg
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: adrianolopes17
+  api_key: '553522832125932'
+  api_secret: JQ5atm78-G88J8vdWc5Q-vUpVfg
+  enhance_image_tag: true
+  static_image_support: false

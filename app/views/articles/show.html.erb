@@ -1,0 +1,53 @@
+<div class="more-space-xl"></div>
+<div class="page article">
+  <div class="page-header-wrapper">
+    <div class="container">
+      <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+          <h1><%= @article.title_a %><span class="text-main"><%= @article.title_b %></span></h1>
+        <div class="divider divider-icon divider-md">//</div>
+        <p class="lead text-gray"><%= @article.subtitle %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <%= image_tag @article.photo.url, class: "img-responsive img-center img-article" %>
+        <div class="more-space-xl"></div>
+        <div class="article-body">
+          <%= raw @article.body %>
+        </div>
+
+      </div>
+      <div class="col-sm-12 col-md-offset-1 col-md-10">
+        <div class="pull-right">
+          <%= social_share_button_tag(@article.title) %>
+        </div>
+        <div class="more-space-xl"></div>
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://acens.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <div class="more-space-xxl"></div>
+</div>

@@ -1,0 +1,52 @@
+<div class="page">
+  <div class="more-space-xl"></div>
+  <div class="container-fluid">
+    <h2 class="text-center">Notícias</h2>
+    <div class="more-space-xl"></div>
+
+    <% unless @articles.blank? %>
+      <div class="row">
+        <div class="blog">
+          <% @articles.order('id desc').each do |article| %>
+            <div class="col-md-3">
+              <div class="blog-box wow zoomIn" data-wow-delay="0.5s">
+                <div class="thumbnail">
+                  <div class="blog-image">
+                    <%= link_to article_path(article) do %>
+                    <%= image_tag article.photo.url(:medium), alt: article.title %>
+                    <div class="cover">
+                      <div class="cover-inner"></div>
+                    </div>
+                    <% end %>
+
+                  </div>
+                  <div class="caption text-center">
+                    <div class="caption-tag">
+                      <i class="fa fa-pencil"></i>
+                    </div>
+                    <a class="title" href="processo-seletivo-2017-2.html">
+                      <h5><%= article.title %></h5>
+                    </a>
+                    <p>By
+                      <span>
+                        <a href="#"><%= article.user.name %></a>
+                      </span>
+                    </p>
+                    <p><%= article.subtitle %></p>
+                    <%= link_to "Leia mais!", article_path(article) %>
+                  </div>
+                  <% if signed_in? %>
+                  <%= link_to "Apagar", article_path(article), method: :delete, class: "btn btn-danger pull-left" %>
+                  <%= link_to "Editar", edit_article_path(article), class: "btn btn-warning pull-right" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="more-space-xxl"></div>
+
+</div>

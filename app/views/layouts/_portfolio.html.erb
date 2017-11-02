@@ -1,0 +1,38 @@
+<!-- Begin portfolio section -->
+<section id="portfolio-section" class="page">
+<!-- TODO Criar formulário da campanha (Ver anotação no papel)-->
+  <!-- Begin page header-->
+  <div class="page-header-wrapper">
+    <div class="container">
+      <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+        <h1>Últimos
+          <span class="text-main">projetos</span>
+        </h1>
+        <div class="divider divider-md divider-icon">//</div>
+      </div>
+    </div>
+  </div>
+  <!-- End page header-->
+
+  <!-- Begin portfolio -->
+  <div class="portfolio">
+    <div class="container-fluid">
+      <div class="row">
+        <% @portfolios.each do |portfolio| %>
+          <%= render "layouts/portfolio_item", portfolio: portfolio %>
+        <% end %>
+      </div>
+      <!-- /.row -->
+
+      <!-- Begin view-more button -->
+      <div class="view-more text-center">
+        <a href="#" class="hidden btn btn-main btn-lg" role="button">Veja mais..</a>
+      </div>
+      <!-- End view-more button -->
+
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- End portfolio -->
+</section>
+<!-- End portfolio section -->

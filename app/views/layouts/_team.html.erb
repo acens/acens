@@ -1,0 +1,111 @@
+<!-- Begin team section -->
+<section id="team-section" class="page">
+
+  <!-- Begin page header-->
+  <div class="page-header-wrapper">
+    <div class="container">
+      <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s">
+        <h1>A
+          <span class="text-main">Equipe</span>
+        </h1>
+        <div class="divider divider-icon divider-md">//</div>
+        <p class="lead text-gray">
+          Contamos com uma equipe capacitada e apaixonada pelo o que faz, utilizando das tecnologias mais recentes do mercado.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- End page header-->
+
+  <!-- Begin team -->
+  <div class="team">
+    <div class="container">
+      <div class="row">
+        <% unless @users.blank? %>
+          <% @users.each do |user| %>
+          <div class="team-box col-xs-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
+            <div class="thumbnail text-center">
+              <div class="team-image">
+                <a href="#" data-toggle="modal" data-target="#teamModal-1">
+                  <%= image_tag user.picture.url(:medium), alt: user.name %>
+                  <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
+                  <div class="cover">
+                    <div class="cover-inner"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="caption">
+                <h5><%= user.name %></h5>
+                <p class="text-gray"><%= user.position_held %></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Begin team modal-1 (John Doe) -->
+          <div class="modal fade" id="teamModal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content text-white">
+                <div class="close" data-dismiss="modal">
+                  <div class="lr">
+                    <div class="rl"></div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="modal-image">
+                          <div class="cover">
+                            <div class="cover-inner"></div>
+                          </div>
+                          <%= image_tag user.picture.url, alt: user.name %>
+                          <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="modal-header">
+                          <h2 class="modal-title" id="myModalLabel-1"><%= user.name %></h2>
+                          <p class="text-gray"><%= user.position_held %></p>
+                          <div class="divider divider-sm divider-white divider-left"></div>
+                        </div>
+                        <div class="modal-text">
+                          <p>
+                            <%= user.description %>
+                          </p>
+                        </div>
+                        <div class="modal-details">
+                          <a href="mailto:info@demo.com" target="_blank">
+                            <i class="fa fa-envelope fa-lg"></i>
+                          </a>
+                          <a href="https://www.facebook.com" target="_blank">
+                            <i class="fa fa-facebook fa-lg"></i>
+                          </a>
+                          <a href="https://twitter.com" target="_blank">
+                            <i class="fa fa-twitter fa-lg"></i>
+                          </a>
+                          <a href="https://www.linkedin.com" target="_blank">
+                            <i class="fa fa-linkedin fa-lg"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End team modal-1 -->
+          <% end %>
+        <% end %>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- End team -->
+
+  <div class="more-space-xl"></div>
+</section>
+<!-- End team section -->

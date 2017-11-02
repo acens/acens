@@ -1,0 +1,66 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require bootstrap.min
+ *= require animate.min
+ *= require font-awesome.min
+ *= require owl.carousel
+ *= require owl.theme
+ *= require theme
+ *= require mobile
+ *= require custom
+ *= require blue
+ *= require jquery-ui.min
+ *= require lobipanel.min
+ *= social-share-button
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "social-share-button";
+
+ $size: 30px;
+
+ .social-share-button {
+    .ssb-icon {
+      background-size: $size $size;
+      height: $size;
+      width: $size;
+    }
+  }
+
+ #map {
+   width: 100%;
+   height: 500px;
+ }
+
+/* Redes Sociais */
+  .social {
+    display: table;
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-media {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  footer ul li {
+    display: inline-block;
+  }
+
+  footer ul {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+  }
