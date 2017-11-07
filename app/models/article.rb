@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
-  has_attached_file :photo, styles: { medium: "350x350", thumb: "100x100" },
+  has_attached_file :photo, styles: { medium: "350x350" },
    :storage => :cloudinary, :path => ':id/:style/:filename',
    :cloudinary_credentials => Rails.root.join("config/cloudinary.yml"),
     default_url: "/system/articles/photos/missing/:style/missing.jpg"

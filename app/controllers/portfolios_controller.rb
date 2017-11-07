@@ -12,7 +12,10 @@ class PortfoliosController < ApplicationController
       if params[:images]
         #===== The magic is here ;)
         params[:images].each { |image|
-          @portfolio.pictures.create(image: image)
+          image_obj = @portfolio.pictures.build
+          image_obj.image = image
+          image_obj.save
+          # @portfolio.pictures.create(image: image)
         }
       end
       redirect_to root_path, notice: "Portfolio adicionado!"
