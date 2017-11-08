@@ -24,8 +24,19 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a class="page-scroll" href="#body-container">Início</a></li>
-          <li><%= link_to "Como?", root_path(anchor: 'about-section'), class: "page-scroll" %>
+          <li><%= link_to "Como?", root_path(anchor: 'about-section'), class: "page-scroll" %></li>
+          <!-- <li><%= link_to "Serviços", root_path(anchor: 'services-section'), class: "page-scroll" %></li>
+          <li><%= link_to "Blog", root_path(anchor: 'blog'), class: "page-scroll" %></li>
+          <li><%= link_to "Equipe", root_path(anchor: 'team-section'), class: "page-scroll" %></li>
+          <li><%= link_to "Portfólio", root_path(anchor: 'portfolio-section'), class: "page-scroll" %></li>
+          <li><%= link_to "Contato", root_path(anchor: 'contact-section'), class: "page-scroll" %></li> -->
             <!-- <a class="page-scroll" href="#about-section">Como?</a></li> -->
+
+            <!-- TODO Ancorar para sessao apenas quando vier de outra pagina. -->
+          <li>
+            <%= link_to "click here" , {:anchor => "contact-section" }, class: "page-scroll" %>
+          </li>
+
           <li><a class="page-scroll" href="#services-section">Serviços</a></li>
           <li><a class="page-scroll" href="#blog">Blog</a></li>
           <li><a class="page-scroll" href="#team-section">Equipe</a></li>

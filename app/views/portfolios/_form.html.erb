@@ -33,8 +33,14 @@
         <%= image_tag f.object.banner.url(:thumb), class: "img_preview" %>
       </div>
       <div class="form-group col-sm-12 col-md-6">
-        <%= f.label :pictures %>
-        <%= file_field_tag "images[]", type: :file, multiple: true, class: "form-control screenshots_field" %>
+        <div class="">
+          <%= f.label :pictures %>
+          <%= file_field_tag "images[]", type: :file, multiple: true, class: "form-control screenshots_field" %>
+        </div>
+        <div class="">
+          <%= f.label :type_service_id %>
+          <%= f.collection_select(:type_service_id, TypeService.all, :id, :name, { prompt: "Tipo do serviço"}, {class: "form-control"}) %>
+        </div>
       </div>
       <!-- TODO Visualizacao dos screenshots na tela Edit e criar logica de alteracao
             dos screenshots na mesma tela.-->

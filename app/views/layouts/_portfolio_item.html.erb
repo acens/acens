@@ -48,17 +48,12 @@
                         <ul>
                           <li>Cliente:
                             <strong>
-                              <a href="http://jaoodontounifor.com" target="_blank"><%= portfolio.client_name %></a>
-                            </strong>
-                          </li>
-                          <li>Data:
-                            <strong>
-                              <a>2017</a>
+                              <%= link_to portfolio.client_name, portfolio.link, target: "_blank" %>
                             </strong>
                           </li>
                           <li>Serviço:
                             <strong>
-                              <a>Desenvolvimento WEB</a>
+                              <%= portfolio.type_service.name unless portfolio.type_service.nil? %>
                             </strong>
                           </li>
                         </ul>

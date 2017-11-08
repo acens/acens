@@ -1,0 +1,22 @@
+<div class="page">
+  <div class="more-space-l"></div>
+  <div class="container">
+    <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+      <h2>Portfolio</h2>
+      <div class="divider divider-icon divider-md">//</div>
+    </div>
+    <div class="row">
+      <% @portfolios.each do |portfolio| %>
+          <div class="col-md-4">
+            <div class="portfolio-item">
+              <h5><%= portfolio.title %></h5>
+              <%= image_tag portfolio.banner.url(:medium) %>
+              <%= link_to "Remover", portfolio_path(portfolio), method: :delete, class: "btn btn-danger" %>
+              <%= link_to "Editar", edit_portfolio_path(portfolio), class: "btn btn-primary" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="more-space-xxl"></div>
+</div>

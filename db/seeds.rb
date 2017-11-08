@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# TypeService.create(name: "Consultoria")
-# TypeService.create(name: "Applicativo")
-# TypeService.create(name: "Site institucional")
-# TypeService.create(name: "Desenvolvimento de sistemas")
+TypeService.create(name: "Consultoria")
+TypeService.create(name: "Applicativo")
+TypeService.create(name: "Site institucional")
+TypeService.create(name: "Desenvolvimento de sistemas")
 
 SurveyOption.create(name: "Pack Android")
 SurveyOption.create(name: "Pack Front-End")
