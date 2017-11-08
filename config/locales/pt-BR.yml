@@ -1,0 +1,44 @@
+pt-BR:
+  activerecord:
+    models:
+      user: Usuário
+      article: Artigo
+      picture: Imagem
+      portfolio: Portfólio
+      survey_option: Opção
+      survey: Pesquisa
+      type_service: Tipo de serviço
+    attributes:
+      user:
+        name: Nome
+        email: Email
+        description: Descrição
+        password: Senha
+        password_confirmation: Confirme sua senha
+        current_password: Senha atual
+        position_held: Cargo
+      article:
+        title: Título
+        subtitle: Subtítulo
+        body: Corpo do artigo
+        photo: Foto
+      picture:
+        image: Imagem
+      portfolio:
+        title: Título
+        subtitle: Subtítulo
+        description: Descrição
+        client_name: Nome do cliente
+        banner: Banner principal
+        pictures: Imagens das telas
+        link: Link
+        type_service_id: Tipo do serviço
+      survey_option:
+        name: Opção
+      survey:
+        name: Nome
+        email: Email
+        registration: Matrícula
+        survey_option: Escolha a opção
+      type_service:
+        name: Nome do serviço
