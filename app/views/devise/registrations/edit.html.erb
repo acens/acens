@@ -31,7 +31,30 @@
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
-
+          <div class="form-group col-md-3">
+            <%= f.label :facebook %>
+            <%= f.text_field :facebook, class: "form-control" %>
+          </div>
+          <div class="form-group col-md-3">
+            <%= f.label :instagram %>
+            <%= f.text_field :instagram, class: "form-control" %>
+          </div>
+          <div class="form-group col-md-3">
+            <%= f.label :twitter %>
+            <%= f.text_field :twitter, class: "form-control" %>
+          </div>
+          <div class="form-group col-md-3">
+            <%= f.label :linkedin %>
+            <%= f.text_field :linkedin, class: "form-control" %>
+          </div>
+          <div class="form-group col-md-3">
+            <%= f.label :email_contact %>
+            <%= f.text_field :email_contact, class: "form-control" %>
+          </div>
+          <div class="form-group col-md-3">
+            <%= f.label :pinterest %>
+            <%= f.text_field :pinterest, class: "form-control" %>
+          </div>
         <div class="form-group col-sm-12 col-md-6">
           <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
           <%= f.password_field :password, autocomplete: "off", class: "form-control" %>

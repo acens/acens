@@ -17,6 +17,7 @@ pt-BR:
         password_confirmation: Confirme sua senha
         current_password: Senha atual
         position_held: Cargo
+        email_contact: Email de contato
       article:
         title: Título
         subtitle: Subtítulo
