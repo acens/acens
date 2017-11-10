@@ -66,24 +66,23 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'acens.herokuapp.com' }
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-
-  config.action_mailer.perform_deliveries = true
 
   config.action_mailer.perform_caching = false
 
+
+  Rails.application.routes.default_url_options[:host] = 'acens.herokuapp.com'
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
-
-
-  config.action_mailer.delivery_method=:smtp
-  config.action_mailer.raise_delivery_errors = true
 
   # Gmail SMTP server setup
   ActionMailer::Base.smtp_settings = {
     :address => "smtp.gmail.com",
     :enable_starttls_auto => true,
     :port => 587,
-    domain: "acens.herokuapp.com",
+    domain: ENV["GMAIL_DOMAIN"],
     :authentication => :plain,
     :user_name => ENV["GMAIL_USERNAME"],
     :password => ENV["GMAIL_PASSWORD"]
