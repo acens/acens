@@ -1,10 +1,5 @@
 <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
 
-  <div>
-    </br>
-  </div>
-
-
 <!-- <form id="form_contact" role="form" method="post"> -->
   <div class="form-group">
     <%= f.text_field :name, required: true, placeholder: "Seu nome", class: "form-control input-lg" %>
@@ -23,7 +18,7 @@
     <!-- <textarea id="message" class="form-control input-lg" rows="5" placeholder="Mensagem" required="" name="message"></textarea> -->
   </div>
 
-  <%= f.submit "Enviar", class: "btn btn-blank btn-lg wow bounceInRight", "data-wow-delay": "0.5s" %>
+  <%= f.submit "Enviar", class: "btn btn-blank btn-lg wow bounceInRight", "data-wow-delay": "0.7s" %>
   <!-- <button type="submit" class="btn btn-blank btn-lg wow bounceInRight" data-wow-delay="0.8s">Enviar</button> -->
 <!-- </form> -->
 
