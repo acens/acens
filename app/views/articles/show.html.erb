@@ -1,3 +1,16 @@
+<% content_for :head do %>
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="<%= @article.title %>" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="<%= article_url(@article) %>" />
+    <meta property="og:description" content="<%= @article.body %>" />
+      <meta property="og:image" content="<%= @article.photo.url(:original)) %>" />
+    <meta property="fb:app_id" content="187676691323618" />
+    <!-- Twitter card property -->
+    <meta name="twitter:card" content="<%= @article.title %>">
+    <meta name="twitter:site" content="@acensjr">
+  <% end %>
+
 <div class="more-space-xl"></div>
 <div class="page article">
   <div class="page-header-wrapper">
