@@ -1,4 +1,23 @@
 pt-BR:
+  users:
+    edit:
+      title: Editar
+
+  links:
+    back: Voltar
+    update: Atualizar
+    save: Salvar
+    delete: Deletar
+
+  layout:
+    user: Usuários
+    articles: Artigos
+    portfolios: Portfólio
+    survey: Pesquisa
+
+  general:
+    form_error: Há erros no formulário, por favor verifique.
+
   activerecord:
     models:
       user: Usuário

@@ -73,30 +73,34 @@
                             <%= user.description %>
                           </p>
                         </div>
-                        <!-- TODO Os links não estão aparecendo -->
                         <div class="modal-details">
-                          <% unless user.facebook %>
-                            <%= link_to user.email_contact, target: "blank" do %>
+                          <% unless user.email_contact.empty? %>
+                            <%= mail_to user.email_contact do %>
+                              <i class="fa fa-envelope fa-lg"></i>
+                            <% end %>
+                          <% end %>
+                          <% unless user.facebook.empty? %>
+                            <%= link_to user.facebook, target: "_blank" do %>
                               <i class="fa fa-facebook fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.twitter %>
-                            <%= link_to user.email_contact, target: "blank" do %>
+                          <% unless user.twitter.empty? %>
+                            <%= link_to user.twitter, target: "_blank" do %>
                               <i class="fa fa-twitter fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.instagram %>
-                            <%= link_to user.email_contact, target: "blank" do %>
+                          <% unless user.instagram.empty? %>
+                            <%= link_to user.instagram, target: "_blank" do %>
                               <i class="fa fa-instagram fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.facebook %>
-                          <%= link_to user.pinterest, target: "blank" do %>
-                          <i class="fa fa-pinterest fa-lg"></i>
+                          <% unless user.pinterest.empty? %>
+                            <%= link_to user.pinterest, target: "_blank" do %>
+                              <i class="fa fa-pinterest fa-lg"></i>
+                            <% end %>
                           <% end %>
-                          <% end %>
-                          <% unless user.linkedin %>
-                            <%= link_to user.email_contact, target: "blank" do %>
+                          <% unless user.linkedin.empty? %>
+                            <%= link_to user.linkedin, target: "_blank" do %>
                               <i class="fa fa-linkedin fa-lg"></i>
                             <% end %>
                           <% end %>
