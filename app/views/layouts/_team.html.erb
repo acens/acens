@@ -74,32 +74,32 @@
                           </p>
                         </div>
                         <div class="modal-details">
-                          <% unless user.email_contact.empty? %>
+                          <% unless user.email_contact.nil? %>
                             <%= mail_to user.email_contact do %>
                               <i class="fa fa-envelope fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.facebook.empty? %>
+                          <% unless user.facebook.nil? %>
                             <%= link_to user.facebook, target: "_blank" do %>
                               <i class="fa fa-facebook fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.twitter.empty? %>
+                          <% unless user.twitter.nil? %>
                             <%= link_to user.twitter, target: "_blank" do %>
                               <i class="fa fa-twitter fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.instagram.empty? %>
+                          <% unless user.instagram.nil? %>
                             <%= link_to user.instagram, target: "_blank" do %>
                               <i class="fa fa-instagram fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.pinterest.empty? %>
+                          <% unless user.pinterest.nil? %>
                             <%= link_to user.pinterest, target: "_blank" do %>
                               <i class="fa fa-pinterest fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.linkedin.empty? %>
+                          <% unless user.linkedin.nil? %>
                             <%= link_to user.linkedin, target: "_blank" do %>
                               <i class="fa fa-linkedin fa-lg"></i>
                             <% end %>
