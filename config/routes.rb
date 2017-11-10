@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   get "/pesquisa", :to => "surveys#new"
   root "home#index"
 
-  match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
 
   # error pages
