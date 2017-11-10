@@ -35,7 +35,7 @@
       </div>
       <div class="col-sm-12 col-md-offset-1 col-md-10">
         <div class="pull-right">
-          <%= social_share_button_tag(@article.title, 'data-source': @article.photo.url, 'data-caption': @article.subtitle, :url => article_url(@article), desc: @article.subtitle)%>
+          <%= social_share_button_tag(@article.title, :'data-caption' => @article.subtitle, 'data-source': @article.photo.url, 'data-caption': @article.subtitle, :url => article_url(@article), desc: @article.subtitle)%>
         </div>
         <div class="more-space-xl"></div>
         <div id="disqus_thread"></div>
