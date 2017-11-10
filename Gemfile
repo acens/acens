@@ -42,6 +42,8 @@ gem 'gibbon', github: "amro/gibbon"
 gem 'social-share-button'
 gem 'paperclip-cloudinary'
 
+gem 'mail_form'
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
