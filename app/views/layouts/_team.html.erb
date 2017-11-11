@@ -74,32 +74,32 @@
                           </p>
                         </div>
                         <div class="modal-details">
-                          <% unless user.email_contact.nil? %>
+                          <% unless user.email_contact.nil? || user.email.empty? %>
                             <%= mail_to user.email_contact do %>
                               <i class="fa fa-envelope fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.facebook.nil? %>
+                          <% unless user.facebook.nil? || user.facebook.empty? %>
                             <%= link_to user.facebook, target: "_blank" do %>
                               <i class="fa fa-facebook fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.twitter.nil? %>
+                          <% unless user.twitter.nil? || user.twitter.empty? %>
                             <%= link_to user.twitter, target: "_blank" do %>
                               <i class="fa fa-twitter fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.instagram.nil? %>
+                          <% unless user.instagram.nil? || user.instagram.empty? %>
                             <%= link_to user.instagram, target: "_blank" do %>
                               <i class="fa fa-instagram fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.pinterest.nil? %>
+                          <% unless user.pinterest.nil? || user.pinterest.empty? %>
                             <%= link_to user.pinterest, target: "_blank" do %>
                               <i class="fa fa-pinterest fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.linkedin.nil? %>
+                          <% unless user.linkedin.nil? || user.linkedin.empty? %>
                             <%= link_to user.linkedin, target: "_blank" do %>
                               <i class="fa fa-linkedin fa-lg"></i>
                             <% end %>
