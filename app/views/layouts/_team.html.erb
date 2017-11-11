@@ -94,11 +94,6 @@
                               <i class="fa fa-instagram fa-lg"></i>
                             <% end %>
                           <% end %>
-                          <% unless user.pinterest.nil? || user.pinterest.empty? %>
-                            <%= link_to user.pinterest, target: "_blank" do %>
-                              <i class="fa fa-pinterest fa-lg"></i>
-                            <% end %>
-                          <% end %>
                           <% unless user.linkedin.nil? || user.linkedin.empty? %>
                             <%= link_to user.linkedin, target: "_blank" do %>
                               <i class="fa fa-linkedin fa-lg"></i>
