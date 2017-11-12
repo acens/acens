@@ -351,13 +351,13 @@ body.boxed .body .navbar-default .container {
 	background-image: url(../img/logo-alter.png);
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo-main.png);
+	background-image: url(../img/logo-alterB.png);
 }
 .navbar-shrink .navbar-brand {
 	background-image: url(../img/logo-alter.png);
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo-main.png);
+	background-image: url(../img/logo-alterB.png);
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus {
