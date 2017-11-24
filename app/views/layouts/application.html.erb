@@ -6,7 +6,14 @@
 	<%= favicon_link_tag 'acensLogo.ico', rel: 'apple-touch-icon' %>
 	<%= favicon_link_tag 'acensLogo.ico', :rel => 'shortcut icon' %>
     <!-- <link rel="shortcut icon" href="img/acensLogo.ico"> -->
-  	<meta name="description" content="Acens Empresa Júnior">
+  	<!-- <meta name="description" content="Acens Empresa Júnior"> -->
+    <!-- <meta name="description" content= -->
+    <% if yield(:meta_description).present? %>
+        <meta name="description" content="<%= yield(:meta_description) %>" />
+      <% else %>
+        <meta name="description" content="Acens Empresa Júnior de Computação - UECE" />
+      <% end %>
+
   	<meta name="keywords" content="Site, Web, Desenvolvimento, Desing, Acens, Empresa júnior" />
   	<meta name="author" content="acens.uece.br">
 
@@ -17,7 +24,13 @@
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'> <!-- Body font -->
 		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'> <!-- Navbar font -->
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- h1, h2, h3, h4, h5, h6 font -->
-    <title>Acens</title>
+    <title>
+        <% if yield(:title).present? %>
+            <%= yield(:title) %>
+        <% else %>
+        Acens
+        <% end %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

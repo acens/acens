@@ -18,6 +18,14 @@ class Article < ApplicationRecord
     split_title[1].join
   end
 
+  def data_postagem
+    created_at.strftime("%d/%m/%Y %H:%Mh")
+  end
+
+  def data_atualizacao
+    updated_at.strftime("%d/%m/%Y %H:%Mh")
+  end
+
   private
   def split_title
     title.chars.each_slice( (title.size/2.0).round ).to_a

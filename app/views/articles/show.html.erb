@@ -11,6 +11,8 @@
     <meta name="twitter:site" content="@acensjr">
   <% end %>
 
+<% title "Acens - #{@article.title}" %>
+<% meta_description "#{@article.subtitle}" %>
 <div class="more-space-xl"></div>
 <div class="page article">
   <div class="page-header-wrapper">
@@ -19,6 +21,11 @@
           <h1><%= @article.title_a %><span class="text-main"><%= @article.title_b %></span></h1>
         <div class="divider divider-icon divider-md">//</div>
         <p class="lead text-gray"><%= @article.subtitle %></p>
+        <div class="row">
+          <div class="col-md-offset-1 col-md-10">
+            <p class="lead text-gray pull-left"><i class="fa fa-calendar"></i> <%= @article.data_postagem %> | <i class="fa fa-calendar"></i> <%= @article.data_atualizacao %></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
