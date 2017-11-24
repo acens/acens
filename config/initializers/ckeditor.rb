@@ -1,4 +1,6 @@
 # Use this hook to configure ckeditor
+
+require 'fileutils'
 Ckeditor.setup do |config|
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default), :mongo_mapper and
@@ -44,8 +46,14 @@ Ckeditor.setup do |config|
   # To reduce the asset precompilation time, you can limit plugins and/or languages to those you need:
   # By default: nil (no limit)
   # config.assets_languages = ['en', 'uk']
-  # config.assets_plugins = ['image', 'smiley']
+  # config.assets_plugins = ['accordion', 'youtube']
 
+  #handle custom addons
+  # assets_root =  Rails.root.join('app','assets','javascripts')
+  # ckeditor_plugins_root = assets_root.join('ckeditor','plugins')
+  # %w(youtube iframe accordionList).each do |ckeditor_plugin|
+    # Ckeditor.assets += Dir[ckeditor_plugins_root.join(ckeditor_plugin, '**', '*.js')].map {|x| x.sub(assets_root.to_path, '').sub(/^\/+/, '')}
+  # end
   # CKEditor CDN
   # More info here http://cdn.ckeditor.com/
   # By default: nil (CDN disabled)

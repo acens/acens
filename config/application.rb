@@ -10,7 +10,9 @@ module Acens
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-
+    config.assets.precompile += Ckeditor.assets
+    config.assets.precompile += %w( ckeditor/* )
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
     config.time_zone = 'Brasilia'
     config.i18n.default_locale = :"pt-BR"
     # Settings in config/environments/* take precedence over those specified here.
