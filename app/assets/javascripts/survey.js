@@ -14,11 +14,7 @@ $(function() {
 
   $('.panel').on('dragged.lobiPanel', function(ev, lobiPanel, result, status, xhr) {
     $('#survey_survey_option_id').val($('.panel').attr('value'));
-    $('.option')[0].text('1ª opção');
-    $('.option')[1].text('2ª opção');
-    // <span class="option">1ª opção: </span>
-    // heading = $('.panel .panel-title h4');
-    // heading.text("1 &ordf; " + heading.text());
+
     window.console.log("Loaded", ev, lobiPanel, result, status, xhr);
   });
 
