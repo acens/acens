@@ -5,7 +5,7 @@ class SurveysController < ApplicationController
   end
 
   def index
-    @inscritos = Survey.all.order(:survey_option_id)
+    @inscritos = Survey.all.order(survey_option_id: :asc, name: :asc)
 
     respond_to do |format|
       format.html

@@ -15,7 +15,6 @@
   <div class="container">
     <table id="tabelainscritos"class="table table-striped " >
       <thead>
-        <th>ID</th>
         <th>Nome</th>
         <th>E-mail</th>
         <th>Matrícula</th>
@@ -24,7 +23,6 @@
       <tbody>
         <% @inscritos.each do |inscrito| %>
         <tr>
-          <td><%= inscrito.id %></td>
           <td><%= inscrito.name %></td>
           <td><%= inscrito.email %></td>
           <td><%= inscrito.registration %></td>
