@@ -14,9 +14,12 @@ Rails.application.routes.draw do
   resources :articles
   resources :portfolios
   resources :surveys, only: [:new, :create]
-  get "/inscricao", :to => "surveys#new"
+  get "/pesquisa", :to => "surveys#new"
+  get "/inscritos", to: "surveys#index"
+
   root "home#index"
 
+  match '/contacts', to: 'contacts#new', via: 'get'
   resources "contacts", only: [:new, :create]
 
   # error pages

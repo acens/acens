@@ -5,8 +5,22 @@ class Survey < ApplicationRecord
                   message: "deve ser uma conta aluno.uece.br" }
 
   validates :registration, uniqueness: true, :numericality => {:only_integer => true}
-
+  require 'csv'
   def first_name
     name.split(" ").first
   end
+
+  def self.to_csv
+    attributes = %w{name email registration survey_option_id }
+
+    CSV.generate(headers: true) do |csv|
+      csv << attributes
+
+      all.each do |survey|
+        csv << attributes.map{ |attr| survey.send(attr) }
+      end
+    end
+  end
+
+
 end
