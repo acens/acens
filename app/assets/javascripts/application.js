@@ -31,7 +31,13 @@
 //= require survey
 //= require ckeditor/init
 //= require social-share-button
+//= require jquery.dataTables.min
+//= require dataTables.bootstrap.min
 // require_tree .
+
+$(document).ready(function() {
+    $('#tabelainscritos').DataTable();
+} );
 
 function readURLImage(preview, input) {
 
