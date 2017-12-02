@@ -6,12 +6,16 @@
       <div class="page-header text-center wow fadeInUp" data-wow-delay="0.2s">
         <h1>Inscritos</h1>
         <div class="divider divider-icon divider-md">//</div>
+        <p class="lead text-gray">
+        <%= "#{@inscritos.size} inscritos"%>
+        </p>
       </div>
     </div>
   </div>
   <div class="container">
     <table class="table">
       <thead>
+        <th>ID</th>
         <th>Nome</th>
         <th>E-mail</th>
         <th>Matrícula</th>
@@ -20,6 +24,7 @@
       <tbody>
         <% @inscritos.each do |inscrito| %>
         <tr>
+          <td><%= inscrito.id %></td>
           <td><%= inscrito.name %></td>
           <td><%= inscrito.email %></td>
           <td><%= inscrito.registration %></td>
