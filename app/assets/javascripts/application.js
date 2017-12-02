@@ -36,8 +36,10 @@
 // require_tree .
 
 $(document).ready(function() {
-    $('#tabelainscritos').DataTable();
-} );
+    $('#tabelainscritos').DataTable({
+      "order": []
+    });
+});
 
 function readURLImage(preview, input) {
 
