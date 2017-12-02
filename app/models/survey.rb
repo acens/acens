@@ -11,7 +11,7 @@ class Survey < ApplicationRecord
   end
 
   def self.to_csv
-    attributes = %w{name email registration survey_option_id }
+    attributes = %w{id name email registration survey_option_id }
 
     CSV.generate(headers: true) do |csv|
       csv << attributes
