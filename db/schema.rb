@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171111012313) do
+ActiveRecord::Schema.define(version: 20171109031131) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -100,6 +100,6 @@ ActiveRecord::Schema.define(version: 20171111012313) do
   end
 
 # Could not dump table "users" because of following StandardError
-#   Unknown type '' for column 'picture'
+#   Unknown type 'attachment' for column 'picture'
 
 end
