@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   end
   resources :articles
   resources :portfolios
-  resources :surveys, only: [:new, :create]
-  get "/inscricao", :to => "surveys#new"
+  # resources :surveys, only: [:new, :create]
+  # get "/inscricao", :to => "surveys#new"
   get "/inscritos", to: "surveys#index"
 
   root "home#index"
