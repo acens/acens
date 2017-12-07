@@ -20,99 +20,101 @@
   <!-- Begin team -->
   <div class="team">
     <div class="container">
-      <div class="row">
         <% unless @users.blank? %>
-          <% @users.each do |user| %>
-          <div class="team-box col-xs-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
-            <div class="thumbnail text-center">
-              <div class="team-image">
-                <a href="#" data-toggle="modal" data-target="#teamModal-<%= user.id %>">
-                  <%= image_tag user.picture.url(:medium), alt: user.name %>
-                  <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
-                  <div class="cover">
-                    <div class="cover-inner"></div>
-                  </div>
-                </a>
-              </div>
-              <div class="caption">
-                <h5><%= user.name %></h5>
-                <p class="text-gray"><%= user.position_held %></p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Begin team modal-1 (John Doe) -->
-          <div class="modal fade" id="teamModal-<%= user.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content text-white">
-                <div class="close" data-dismiss="modal">
-                  <div class="lr">
-                    <div class="rl"></div>
+          <% @users.in_groups_of(4, false).each do |group| %>
+            <div class="row">
+              <% group.each do |user| %>
+                <div class="team-box col-xs-6 col-md-3 wow flipInY" data-wow-delay="0.5s">
+                  <div class="thumbnail text-center">
+                    <div class="team-image">
+                      <a href="#" data-toggle="modal" data-target="#teamModal-<%= user.id %>">
+                        <%= image_tag user.picture.url(:medium), alt: user.name %>
+                        <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
+                        <div class="cover">
+                          <div class="cover-inner"></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="caption">
+                      <h5><%= user.name %></h5>
+                      <p class="text-gray"><%= user.position_held %></p>
+                    </div>
                   </div>
                 </div>
-                <div class="container">
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-md-7">
-                        <div class="modal-image">
-                          <div class="cover">
-                            <div class="cover-inner"></div>
-                          </div>
-                          <%= image_tag user.picture.url(:original), alt: user.name %>
-                          <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
+
+                <!-- Begin team modal-1 (John Doe) -->
+                <div class="modal fade" id="teamModal-<%= user.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-1" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content text-white">
+                      <div class="close" data-dismiss="modal">
+                        <div class="lr">
+                          <div class="rl"></div>
                         </div>
                       </div>
-                      <div class="col-md-5">
-                        <div class="modal-header">
-                          <h2 class="modal-title" id="myModalLabel-1"><%= user.name %></h2>
-                          <p class="text-gray"><%= user.position_held %></p>
-                          <div class="divider divider-sm divider-white divider-left"></div>
-                        </div>
-                        <div class="modal-text">
-                          <p>
-                            <%= user.description %>
-                          </p>
-                        </div>
-                        <div class="modal-details">
-                          <% unless user.email_contact.nil? || user.email.empty? %>
-                            <%= mail_to user.email_contact do %>
-                              <i class="fa fa-envelope fa-lg"></i>
-                            <% end %>
-                          <% end %>
-                          <% unless user.facebook.nil? || user.facebook.empty? %>
-                            <%= link_to user.facebook, target: "_blank" do %>
-                              <i class="fa fa-facebook fa-lg"></i>
-                            <% end %>
-                          <% end %>
-                          <% unless user.twitter.nil? || user.twitter.empty? %>
-                            <%= link_to user.twitter, target: "_blank" do %>
-                              <i class="fa fa-twitter fa-lg"></i>
-                            <% end %>
-                          <% end %>
-                          <% unless user.instagram.nil? || user.instagram.empty? %>
-                            <%= link_to user.instagram, target: "_blank" do %>
-                              <i class="fa fa-instagram fa-lg"></i>
-                            <% end %>
-                          <% end %>
-                          <% unless user.linkedin.nil? || user.linkedin.empty? %>
-                            <%= link_to user.linkedin, target: "_blank" do %>
-                              <i class="fa fa-linkedin fa-lg"></i>
-                            <% end %>
-                          <% end %>
+                      <div class="container">
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col-md-7">
+                              <div class="modal-image">
+                                <div class="cover">
+                                  <div class="cover-inner"></div>
+                                </div>
+                                <%= image_tag user.picture.url(:original), alt: user.name %>
+                                <!-- <img src="img/team/staff-1.jpg" alt="John Doe"> -->
+                              </div>
+                            </div>
+                            <div class="col-md-5">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="myModalLabel-1"><%= user.name %></h2>
+                                <p class="text-gray"><%= user.position_held %></p>
+                                <div class="divider divider-sm divider-white divider-left"></div>
+                              </div>
+                              <div class="modal-text">
+                                <p>
+                                  <%= user.description %>
+                                </p>
+                              </div>
+                              <div class="modal-details">
+                                <% unless user.email_contact.nil? || user.email.empty? %>
+                                  <%= mail_to user.email_contact do %>
+                                    <i class="fa fa-envelope fa-lg"></i>
+                                  <% end %>
+                                <% end %>
+                                <% unless user.facebook.nil? || user.facebook.empty? %>
+                                  <%= link_to user.facebook, target: "_blank" do %>
+                                    <i class="fa fa-facebook fa-lg"></i>
+                                  <% end %>
+                                <% end %>
+                                <% unless user.twitter.nil? || user.twitter.empty? %>
+                                  <%= link_to user.twitter, target: "_blank" do %>
+                                    <i class="fa fa-twitter fa-lg"></i>
+                                  <% end %>
+                                <% end %>
+                                <% unless user.instagram.nil? || user.instagram.empty? %>
+                                  <%= link_to user.instagram, target: "_blank" do %>
+                                    <i class="fa fa-instagram fa-lg"></i>
+                                  <% end %>
+                                <% end %>
+                                <% unless user.linkedin.nil? || user.linkedin.empty? %>
+                                  <%= link_to user.linkedin, target: "_blank" do %>
+                                    <i class="fa fa-linkedin fa-lg"></i>
+                                  <% end %>
+                                <% end %>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+                <!-- End team modal-1 -->
+              <% end %>
             </div>
-          </div>
-          <!-- End team modal-1 -->
+            <!-- /.row -->
           <% end %>
         <% end %>
 
-      </div>
-      <!-- /.row -->
 
     </div>
     <!-- /.container -->
