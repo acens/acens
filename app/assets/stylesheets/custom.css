@@ -23,3 +23,7 @@ img.img_preview {
 .article-body {
   text-align: justify;
 }
+
+.team .team-image img {
+  width: 300px;
+}
