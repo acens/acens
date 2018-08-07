@@ -348,16 +348,29 @@ body.boxed .body .navbar-default .container {
 	transition: all 0.2s ease-in-out;
 }
 .navbar-default .navbar-brand {
-	background-image: url(../img/logo-alter.png);
+	background-image: url(../img/NewLogo.png);
+	background-size: 130px 50px;
+	width: 150px;
+	position: absolute;
+	object-fit: cover;
+
 }
 .navbar-transparent .navbar-brand {
-	background-image: url(../img/logo-alterB.png);
+	background-image: url(../img/NewLogoWhite.png);
+	background-size: 130px 50px;
+
 }
 .navbar-shrink .navbar-brand {
-	background-image: url(../img/logo-alter.png);
+	background-image: url(../img/NewLogo.png);
+	background-size: 130px 50px;
+	width: 150px;
+	position: absolute;
+	object-fit: cover;
+/* so pra commitar */
 }
 .navbar-inverse .navbar-brand {
-	background-image: url(../img/logo-alterB.png);
+	background-image: url(../img/NewLogoWhite.png);
+	background-size: 130px 50px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:focus {
