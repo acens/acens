@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171204145919) do
     t.text "body"
     t.string "photo_file_name"
     t.string "photo_content_type"
-    t.integer "photo_file_size"
+    t.bigint "photo_file_size"
     t.datetime "photo_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20171204145919) do
   create_table "pictures", force: :cascade do |t|
     t.string "image_file_name"
     t.string "image_content_type"
-    t.integer "image_file_size"
+    t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 20171204145919) do
     t.string "client_name"
     t.string "banner_file_name"
     t.string "banner_content_type"
-    t.integer "banner_file_size"
+    t.bigint "banner_file_size"
     t.datetime "banner_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

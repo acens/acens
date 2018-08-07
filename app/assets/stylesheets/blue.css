@@ -2,10 +2,10 @@
 
 
 /* background-color */
-.btn-main, 
-.btn-main:focus, 
-.btn-main.focus, 
-.btn-main:active, 
+.btn-main,
+.btn-main:focus,
+.btn-main.focus,
+.btn-main:active,
 .btn-main.active,
 .portfolio .modal-content .lr,
 .portfolio .modal-content .lr .rl,
@@ -19,21 +19,21 @@
 .team .modal-content .lr,
 .team .modal-content .lr .rl,
 .prices .price-box-featured .panel-heading,
-.btn-main, .btn-main:focus, 
-.btn-main.focus, 
-.btn-main:active, 
+.btn-main, .btn-main:focus,
+.btn-main.focus,
+.btn-main:active,
 .btn-main.active,
 .btn-blank:hover,
 .trusted-by,
 .featured-box .get-started .btn {
-	background-color: #0f4575;
+	background-color: #1b203a;
 }
 
 
 /* background-color hover */
-.btn-main:hover, 
+.btn-main:hover,
 .featured-box .get-started .btn:hover {
-	background-color: #24659B;
+	background-color: #232b53;
 }
 
 
@@ -65,55 +65,55 @@
 
 
 /* color */
-a, 
-a:hover, 
+a,
+a:hover,
 a:focus,
 .text-main,
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
-.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > li > a:hover, 
-.navbar-default .navbar-nav > li > a:focus, 
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li.active > a,
-.navbar-inverse .navbar-nav > .active > a, 
-.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus,
-.navbar-inverse .navbar-nav > li > a:hover, 
-.navbar-inverse .navbar-nav > li > a:focus, 
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li.active > a,
-.navbar-inverse .navbar-nav > .open > a, 
-.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
 .navbar-inverse .navbar-nav > .open > a:focus,
-body.boxed .body .navbar-default .navbar-nav > li > a:hover, 
+body.boxed .body .navbar-default .navbar-nav > li > a:hover,
 body.boxed .body .navbar-default .navbar-nav > li > a:focus,
-body.boxed .body .navbar-default .navbar-nav > .active > a, 
-body.boxed .body .navbar-default .navbar-nav > .active > a:hover, 
+body.boxed .body .navbar-default .navbar-nav > .active > a,
+body.boxed .body .navbar-default .navbar-nav > .active > a:hover,
 body.boxed .body .navbar-default .navbar-nav > .active > a:focus,
-body.boxed .body .navbar-inverse .navbar-nav > .active > a, 
-body.boxed .body .navbar-inverse .navbar-nav > .active > a:hover, 
+body.boxed .body .navbar-inverse .navbar-nav > .active > a,
+body.boxed .body .navbar-inverse .navbar-nav > .active > a:hover,
 body.boxed .body .navbar-inverse .navbar-nav > .active > a:focus,
-body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a, 
-body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a:hover, 
+body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a,
+body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a:hover,
 body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a:focus,
 .navbar-default.navbar-fixed-top.navbar-shrink .navbar-brand:hover,
-.navbar-default.navbar-shrink .navbar-nav > li > a:hover, 
-.navbar-default.navbar-shrink .navbar-nav > li > a:focus, 
+.navbar-default.navbar-shrink .navbar-nav > li > a:hover,
+.navbar-default.navbar-shrink .navbar-nav > li > a:focus,
 .navbar-default.navbar-shrink .navbar-nav > li.active > a,
-.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a, 
-.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:hover, 
+.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a,
+.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:hover,
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:focus,
-.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a:hover, 
-.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a:focus, 
+.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a:hover,
+.navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li > a:focus,
 .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > li.active > a,
 .navbar-fixed-top.navbar-shrink .navbar-brand:hover,
-body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a, 
-body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:hover, 
+body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a,
+body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:hover,
 body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .active > a:focus,
 .info-box-1 .info-box-info a:hover,
 .info-box-1:hover .info-box-icon,
@@ -122,16 +122,16 @@ body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .a
 #contact-section .social-icons a,
 .blog .thumbnail .caption .title:hover,
 .prices .price-box-featured .price-box-ribbon,
-.btn-blank, 
-.btn-blank:focus, 
-.btn-blank.focus, 
-.btn-blank:active, 
+.btn-blank,
+.btn-blank:focus,
+.btn-blank.focus,
+.btn-blank:active,
 .btn-blank.active,
 .dropdown-menu > li > a.active,
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-	color: #0f4575;
+	color: #1b203a;
 }
 
 
@@ -139,16 +139,16 @@ body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .a
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus,
-.owl-theme .owl-controls .owl-page.active span, 
+.owl-theme .owl-controls .owl-page.active span,
 .owl-theme .owl-controls.clickable .owl-page:hover span,
 .scrolltotop,
-.btn-blank, 
-.btn-blank:focus, 
-.btn-blank.focus, 
-.btn-blank:active, 
+.btn-blank,
+.btn-blank:focus,
+.btn-blank.focus,
+.btn-blank:active,
 .btn-blank.active,
 .btn-blank:hover {
-	border-color: #0f4575;
+	border-color:#1b203a;
 }
 
 
@@ -157,9 +157,9 @@ body.boxed .body .navbar-inverse.navbar-fixed-top.navbar-shrink .navbar-nav > .a
 .navbar-inverse .dropdown-menu,
 .nav-pills > li.active > a:after,
 body.boxed .top-slidingbar-trigger-wrapper,
-.top-slidingbar-trigger-wrapper, 
+.top-slidingbar-trigger-wrapper,
 .navbar-transparent.navbar-shrink .top-slidingbar-trigger-wrapper {
-	border-top-color: #0f4575;
+	border-top-color: #1b203a;
 }
 
 
