@@ -1,7 +1,7 @@
 # Acens
-![Acens logo](app/assets/images/acens_logo.png "#goacens")
+![Acens logo](app/assets/images/NewLogo.png "#goacens")
 
-Novo site da [acens](http://acens.uece.br), Empresa Junior do curso de ciência
+Novo site da [acens](http://acensjr.com), Empresa Junior do curso de ciência
 da computação, Universidade Estadual do Ceará.
 
 
