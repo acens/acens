@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-
-
   devise_for :users, :skip => [:registrations]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_scope :user do
@@ -13,8 +11,8 @@ Rails.application.routes.draw do
   end
   resources :articles
   resources :portfolios
-  # resources :surveys, only: [:new, :create]
-  # get "/inscricao", :to => "surveys#new"
+  resources :surveys, only: [:new, :create]
+  get "/inscricao", :to => "surveys#new"
   get "/inscritos", to: "surveys#index"
 
   root "home#index"
@@ -23,7 +21,6 @@ Rails.application.routes.draw do
   resources "contacts", only: [:new, :create]
 
   # error pages
-
   get "/delete_imagem", :to => "portfolio#delete_picture"
   get "/404", :to => "errors#not_found"
   get "/422", :to => "errors#unacceptable"

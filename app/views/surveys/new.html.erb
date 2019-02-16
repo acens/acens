@@ -4,7 +4,7 @@
     <div class="page-header text-center wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
       <h2>Inscrição</h2>
       <div class="divider divider-icon divider-md">//</div>
-      <p class="lead text-gray">Inscreva-se para obter acesso à uma das duas carreiras ofertadas.
+      <p class="lead text-gray">Inscreva-se para escolher uma carreira de seu interesse.
       </p>
     </div>
 
@@ -18,25 +18,25 @@
     <div class="row">
       <%= form_for @survey do |f| %>
         <div class="form-group col-sm-12 col-md-4 col-md-offset-2">
-          <%= f.label :name %>
+          <%= f.label "Nome*" %>
           <%= f.text_field :name, class: "form-control", placeholder: "Digite seu nome completo" %>
         </div>
         <div class="form-group col-sm-12 col-md-4 ">
-          <%= f.label :registration %>
+          <%= f.label "Matrícula*" %>
           <%= f.text_field :registration, class: "form-control", maxlength: 7, placeholder: "Digite sua matrícula"%>
         </div>
         <div class="form-group col-sm-12 col-md-4 col-md-offset-2">
-          <%= f.label :email %>
-          <%= f.email_field :email, class: "form-control", placeholder: "fulano@aluno.uece.br || E-mail da UECE" %>
+          <%= f.label "Email*" %>
+          <%= f.email_field :email, class: "form-control", placeholder: "E-mail da UECE" %>
         </div>
-        <div class="form-group hidden">
+        <div class="form-group col-sm-12 col-md-4">
+          <%= f.label "Carreira*" %>
           <br>
-          <%= f.label :survey_option_id %>
-          <%= f.select :survey_option_id, options_from_collection_for_select(SurveyOption.all, :id, :name), class: "form-control" %>
+          <%= f.select :survey_option_id, options_from_collection_for_select(SurveyOption.all, :id, :name), class: "custom-select" %>
         </div>
-        <div class="form-group col-sm-12 col-md-6">
+        <div class="form-group col-sm-12 col-md-6 col-md-offset-2">
           <br>
-          <%= f.submit "Cadastrar", class: "btn btn-primary" %>
+          <%= f.submit "Cadastrar", class: "btn btn-main" %>
         </div>
       <% end %>
     </div>

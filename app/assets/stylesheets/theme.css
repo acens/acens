@@ -1628,6 +1628,10 @@ transform: rotate(-45deg);
 #contact-section .btn-blank:hover {
 	color: #222;
 }
+#contact-section .btn-white:hover {
+	color: white;
+}
+
 /* ===== End contact ===== */
 
 /* ===== Begin blog ===== */
@@ -2126,7 +2130,7 @@ transform: rotate(-45deg);
 	-o-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-.scrolltotop .fa, .scrolltotop .glyphicon{
+.scrolltotop .fas, .scrolltotop .glyphicon{
 	padding-left: 4px;
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
