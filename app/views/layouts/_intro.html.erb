@@ -1,32 +1,32 @@
 <!-- Begin text carousel intro section -->
-<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/intro-bg/intro-bg-5.jpg);">
+<section id="text-carousel-intro-section" class="parallax" data-stellar-background-ratio="0.5" style="background-image: url(img/danial-ricaros-FCHlYvR5gJI-unsplash.jpg);">
   <div class="container">
     <div class="caption text-center text-white" data-stellar-ratio="0.7">
 
       <div id="owl-intro-text" class="owl-carousel">
         <% unless @articles.blank? %>
         <div class="item">
-          <h1><%= @articles.last.title %></h1>
+          <h1 style="text-shadow: -1px -1px white, 1px 1px #333"><%= @articles.last.title %></h1>
           <h3><%= @articles.last.subtitle %></h3>
           <div class="more-space-m"></div>
           <%= link_to "Ver mais", article_path(@articles.last), class: "btn btn-main btn-lg page-scroll", role:"button" %>
         </div>
         <% end %>
         <div class="item">
-          <h1>Acens</h1>
-          <h3>A realização da sua aplicação começa aqui.</h3>
+          <h1 style="text-shadow: -1px -1px white, 2px 2px black;">Acens</h1>
+          <h3 style="text-shadow: -1px -1px white, 1px 1px #333">A realização da sua aplicação começa aqui.</h3>
           <div class="more-space-m"></div>
           <a class="btn btn-main btn-lg page-scroll" href="#about-section" role="button">Saiba mais</a>
         </div>
         <div class="item">
-          <h1>Mais de 10 anos no mercado</h1>
-          <h3>Desenvolvendo sites e soluções web</h3>
+          <h1  style="text-shadow: -1px -1px white, 1px 1px #333">Mais de 10 anos no mercado</h1>
+          <h3  style="text-shadow: -1px -1px white, 1px 1px #333">Desenvolvendo sites e soluções web</h3>
           <div class="more-space-m"></div>
           <a class="btn btn-main btn-lg page-scroll" href="#services-section" role="button">Veja nossos serviços</a>
         </div>
         <div class="item">
-          <h1>PRONTO PARA NOS CONHECER?</h1>
-          <h3>Não perca tempo!</h3>
+          <h1  style="text-shadow: -1px -1px white, 1px 1px #333">PRONTO PARA NOS CONHECER?</h1>
+          <h3  style="text-shadow: -1px -1px white, 1px 1px #333">Não perca tempo!</h3>
           <div class="more-space-m"></div>
           <a class="btn btn-main btn-lg page-scroll" href="#about-section" role="button">Conheça-nos</a>
         </div>

@@ -39,7 +39,7 @@ body #body-container {
 .page {
 	overflow: hidden;
 	background-color: #FFF;  /* for full width layout */
-	padding-top: 50px;
+	/*padding-top: 50px;*/
 }
 .container {
 	position: relative;
@@ -593,7 +593,7 @@ body.boxed .body .navbar-inverse.navbar-transparent .navbar-nav > .active > a, b
 	background-color: rgba(0, 0, 0, 0);
 }
 .navbar-fixed-top.navbar-transparent .container {
-	padding-top: 30px;
+	/*padding-top: 30px!important;*/
 	padding-bottom: 0;
 }
 .navbar-fixed-bottom.navbar-transparent .container {
